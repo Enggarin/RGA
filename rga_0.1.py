@@ -129,7 +129,7 @@ for i in trip_matrix.itertuples():
     nodes_out = [nodes_out.values[i] for i in t1]
     nodes_in = [nodes_in.values[i] for i in t2]
     
-    if len(nodes_in) >= 1 and len(nodes_out) >= 1: # todo plan, make cheking before, and true not works here?/o\
+    if len(nodes_in) >= 1 and len(nodes_out) >= 1: # TODO plan, make cheking before
         current_period = 0
         for hour in trip_matrix.columns[2:]:
             period_arr = eval('i.' + hour)
