@@ -15,7 +15,7 @@ if stage == 1:
 	back_net['direction'] = -1
 	r_net = pd.concat([r_net, back_net], axis=0, ignore_index=True, sort=False)
 
-	##Remove loops - you should check ur graph before!
+	##Remove loops - optional, you should check ur graph before!
 	r_net['s_e'] = r_net.source.astype(str) + '_' + r_net.target.astype(str)
 	r_net.sort_values(by=['s_e', 'length'], inplace = True)
 	r_net.drop_duplicates(subset ='s_e', keep = 'first', inplace = True)
